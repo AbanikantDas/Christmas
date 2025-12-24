@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Merry Christmas 🎄</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background:
+        radial-gradient(circle at top, rgba(255,255,255,0.15), transparent 40%),
+        linear-gradient(to bottom, #0b1d26, #122f3a, #1c4b5d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+}
+
+/* Snow */
+.snow {
+    position: absolute;
+    top: -10px;
+    animation: fall linear infinite;
+}
+.snow:nth-child(1){left:10%;font-size:14px;animation-duration:10s;}
+.snow:nth-child(2){left:30%;font-size:18px;animation-duration:12s;}
+.snow:nth-child(3){left:50%;font-size:12px;animation-duration:9s;}
+.snow:nth-child(4){left:70%;font-size:20px;animation-duration:13s;}
+.snow:nth-child(5){left:90%;font-size:15px;animation-duration:11s;}
+
+@keyframes fall {
+    to { transform: translateY(110vh); }
+}
+
+/* Card */
+.card {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(14px);
+    padding: 50px;
+    border-radius: 30px;
+    text-align: center;
+    max-width: 520px;
+    width: 90%;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+}
+
+.title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    color: gold;
+    text-shadow: 0 0 25px gold;
+}
+
+.tree {
+    font-size: 90px;
+    margin: 20px 0;
+    animation: glow 2.5s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px gold; }
+    to { text-shadow: 0 0 40px white; }
+}
+
+.message {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.button {
+    display: inline-block;
+    padding: 14px 36px;
+    border-radius: 40px;
+    background: linear-gradient(45deg, gold, orange);
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+/* Gifts */
+#gifts {
+    display: none;
+    margin-top: 30px;
+    animation: pop 1s ease;
+}
+#gifts:target {
+    display: block;
+}
+
+@keyframes pop {
+    from { opacity: 0; transform: scale(0.6); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.gift-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 60px;
+    margin-top: 15px;
+}
+
+.gift-boxes a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.gift-boxes a:hover {
+    transform: scale(1.2);
+}
+
+/* Surprise */
+#surprise {
+    display: none;
+    margin-top: 25px;
+    animation: fadeUp 1.2s ease;
+}
+
+#surprise:target {
+    display: block;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.surprise-box {
+    background: rgba(255,255,255,0.2);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: inset 0 0 25px rgba(255,255,255,0.2);
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Snow -->
+<div class="snow">❄</div>
+<div class="snow">❄</div>
+<div class="snow">❄</div>
+<div class="snow">❄</div>
+<div class="snow">❄</div>
+
+<div class="card">
+    <h1 class="title">Merry Christmas</h1>
+    <div class="tree">🎄</div>
+
+    <p class="message">
+        May your Christmas be filled with love,
+        peace, and beautiful memories ✨
+    </p>
+
+    <a href="#gifts" class="button">Season’s Greetings 🎁</a>
+
+    <!-- Gifts -->
+    <div id="gifts">
+        <h2>🎁 Click a Gift 🎁</h2>
+        <div class="gift-boxes">
+            <a href="#surprise">🎁</a>
+            <a href="#surprise">🎁</a>
+            <a href="#surprise">🎁</a>
+        </div>
+    </div>
+
+    <!-- Surprise -->
+    <div id="surprise">
+        <div class="surprise-box">
+            <h2>✨ A Special Wish ✨</h2>
+            <p>
+                May your life be filled with happiness,
+                success, good health, and endless smiles.
+                Have a magical Christmas and a bright New Year ❤️🎄
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        Made with ❤️ for Christmas
+            <p>BY ABANIKANT DAS</p>
+    </footer>
+</div>
+
+</body>
+</html>
